@@ -1,14 +1,22 @@
 # RepoSentinel
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![CI](https://github.com/dougsanreis/reposentinel/actions/workflows/ci.yml/badge.svg)
+
 > Offline Git safety gate that prevents secrets, build artifacts and unsafe commits before they reach GitHub.
 
-RepoSentinel helps developers avoid common repository mistakes before they are committed or pushed.
+RepoSentinel helps developers keep repositories clean and safe before mistakes become permanent.
+
+## Why
+
+Developers accidentally commit `.env`, private keys, tokens, `.venv`, `node_modules`, build outputs and oversized changes.
+
+RepoSentinel blocks these problems locally before they reach GitHub.
 
 ## Install
 
-```bash
-python3 -m pip install .
-```
+See [docs/INSTALL.md](docs/INSTALL.md).
 
 ## Use
 
@@ -18,31 +26,13 @@ reposentinel scan
 reposentinel install-hook
 ```
 
-## What it detects
-
-- `.env` files
-- private keys
-- GitHub/OpenAI-style tokens
-- `.venv`
-- `node_modules`
-- `.next`
-- `dist`
-- `build`
-- cache folders
-- oversized accidental commits
-
-## Why it is different
-
-- Offline first
-- Zero telemetry
-- Git-native
-- Fast
-- Simple
-- Built for developer workflows
-
 ## Security
 
-RepoSentinel runs locally and does not collect data.
+RepoSentinel runs locally. No telemetry. No cloud upload. No private SYRA dependency.
+
+## Roadmap
+
+See [ROADMAP.md](ROADMAP.md).
 
 ## License
 
