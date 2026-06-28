@@ -1,0 +1,12 @@
+[project]
+name = "reposentinel"
+version = "0.1.0"
+description = "Offline Git repository protection against secrets, dependency folders, build artifacts and unsafe commits."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "SYRA Labs"}]
+keywords = ["git", "security", "secrets", "devtools", "pre-commit"]
+
+[project.scripts]
+reposentinel = "reposentinel.cli:main"
